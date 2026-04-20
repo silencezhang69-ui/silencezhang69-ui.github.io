@@ -611,65 +611,6 @@
       color: rgba(226,232,240,0.55);
     }
 
-    /* ===== 线上课堂相册 ===== */
-    #gallery { background: var(--bg2); }
-
-    .gallery-scroll-wrap {
-      overflow-x: auto;
-      overflow-y: hidden;
-      cursor: grab;
-      user-select: none;
-      padding-bottom: 12px;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-    .gallery-scroll-wrap::-webkit-scrollbar { display: none; }
-    .gallery-scroll-wrap.grabbing { cursor: grabbing; }
-
-    .gallery-track {
-      display: flex;
-      gap: 16px;
-      width: max-content;
-    }
-
-    .gallery-item {
-      flex-shrink: 0;
-      width: 380px;
-      height: 260px;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid rgba(79,142,247,0.18);
-      transition: transform .3s, box-shadow .3s;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform .4s;
-      pointer-events: none;
-    }
-
-    .gallery-item:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 48px rgba(79,142,247,0.22);
-    }
-
-    .gallery-item:hover img { transform: scale(1.04); }
-
-    .gallery-hint {
-      text-align: center;
-      margin-top: 18px;
-      font-size: 13px;
-      color: var(--gray);
-      letter-spacing: 1px;
-    }
-
-    @media (max-width: 960px) {
-      .gallery-item { width: 280px; height: 190px; }
-    }
-
     /* ===== 学员反馈 ===== */
     #testimonials { background: var(--bg); }
 
@@ -1084,6 +1025,8 @@
       #stats { padding: 36px 24px; }
       .stats-inner { grid-template-columns: repeat(2, 1fr); }
       .about-grid, .modules-grid, .gains-grid, .testimonials-grid { grid-template-columns: 1fr; }
+      #listening .philosophy-grid { grid-template-columns: 1fr; }
+      #listening [style*="grid-template-columns: repeat(5"] { grid-template-columns: repeat(2, 1fr); }
       .pricing-card { padding: 40px 24px; }
     }
   </style>
@@ -1099,6 +1042,7 @@
   <ul class="nav-links">
     <li><a href="#about">关于我</a></li>
     <li><a href="#modules">课程</a></li>
+    <li><a href="#listening">倾听课</a></li>
     <li><a href="#philosophy">理念</a></li>
     <li><a href="#gains">收获</a></li>
     <li><a href="#testimonials">学员反馈</a></li>
@@ -1289,6 +1233,117 @@
   </div>
 </section>
 
+<!-- 倾听与被倾听 -->
+<section id="listening" style="background: var(--bg2);">
+  <div class="section-wrap">
+    <div class="tag reveal">SPECIAL MODULE</div>
+    <h2 class="section-h2 reveal">倾听与<span class="grad">被倾听</span></h2>
+    <p class="section-lead reveal">向上社交的终极方法论——不是话术，是真正看见对方。</p>
+
+    <!-- 核心金句 -->
+    <div class="test-featured reveal" style="margin-bottom: 60px;">
+      <div class="test-featured-quote">"倾听，是你能给予另一个人最好的礼物。"</div>
+      <div class="test-featured-meta">—— 《失传的倾听艺术》</div>
+    </div>
+
+    <!-- 三大认知 -->
+    <div class="philosophy-grid" style="margin-bottom: 60px;">
+      <div class="philosophy-card reveal">
+        <span class="philosophy-icon">🎁</span>
+        <h3 class="philosophy-title">倾听是礼物，不是技巧</h3>
+        <p class="philosophy-desc">
+          当你真正倾听一个人，你在告诉他：你是重要的，你值得被看见。<br><br>
+          这是人最深的需求——不是被解决，而是被理解。倾听不是为了回应，而是为了让对方感觉到：有人在这里。
+        </p>
+      </div>
+      <div class="philosophy-card reveal">
+        <span class="philosophy-icon">🪞</span>
+        <h3 class="philosophy-title">你不愿倾听，是因为你害怕</h3>
+        <p class="philosophy-desc">
+          我们之所以不听，不是因为不在乎，而是因为对方的话触碰了我们自己的某个部分。<br><br>
+          他人身上让你不舒服的，往往正是你自己内心没有处理好的。真正的倾听，从认识自己开始。
+        </p>
+      </div>
+      <div class="philosophy-card reveal">
+        <span class="philosophy-icon">🔗</span>
+        <h3 class="philosophy-title">说话的人由说话的人结束</h3>
+        <p class="philosophy-desc">
+          一句话谁起头，由谁结束——这是倾听最基本的尊重。<br><br>
+          很多关系破裂，不是因为不爱，而是因为对方话还没说完，你已经在给解决方案了。先听完，再说话。
+        </p>
+      </div>
+    </div>
+
+    <!-- 响应式倾听5步 -->
+    <div class="tag reveal">METHODOLOGY</div>
+    <h3 class="section-h2 reveal" style="font-size: clamp(22px, 3vw, 36px); margin-bottom: 40px;">响应式倾听 <span class="grad">5步法</span></h3>
+
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-bottom: 60px;">
+      <div class="module-card reveal" style="text-align: center;">
+        <div class="module-icon" style="margin: 0 auto 16px;">👂</div>
+        <p class="module-num">STEP 01</p>
+        <h4 class="module-name" style="font-size: 15px;">停下来</h4>
+        <p class="module-desc">放下手机，停止内心独白，把全部注意力给对方。</p>
+      </div>
+      <div class="module-card reveal" style="text-align: center;">
+        <div class="module-icon" style="margin: 0 auto 16px;">👁</div>
+        <p class="module-num">STEP 02</p>
+        <h4 class="module-name" style="font-size: 15px;">看见情感</h4>
+        <p class="module-desc">不只听内容，感受对方话语背后的情绪和需求。</p>
+      </div>
+      <div class="module-card reveal" style="text-align: center;">
+        <div class="module-icon" style="margin: 0 auto 16px;">🪞</div>
+        <p class="module-num">STEP 03</p>
+        <h4 class="module-name" style="font-size: 15px;">反映情感</h4>
+        <p class="module-desc">用语言说出你感受到的情绪——"你听起来很累"比"加油"有用一百倍。</p>
+      </div>
+      <div class="module-card reveal" style="text-align: center;">
+        <div class="module-icon" style="margin: 0 auto 16px;">❓</div>
+        <p class="module-num">STEP 04</p>
+        <h4 class="module-name" style="font-size: 15px;">开放提问</h4>
+        <p class="module-desc">用"你当时是什么感受"代替"你怎么能这样"，帮对方把话说出来。</p>
+      </div>
+      <div class="module-card reveal" style="text-align: center;">
+        <div class="module-icon" style="margin: 0 auto 16px;">🤝</div>
+        <p class="module-num">STEP 05</p>
+        <h4 class="module-name" style="font-size: 15px;">征得同意再建议</h4>
+        <p class="module-desc">提建议前先问"你是需要我帮你想办法，还是只是想说说"——这一句话改变一段关系。</p>
+      </div>
+    </div>
+
+    <!-- 四大场景 -->
+    <div class="tag reveal">FOUR SCENARIOS</div>
+    <h3 class="section-h2 reveal" style="font-size: clamp(22px, 3vw, 36px); margin-bottom: 40px;">四大场景<span class="grad">实战</span></h3>
+
+    <div class="modules-grid">
+      <div class="module-card reveal">
+        <div class="module-icon">💼</div>
+        <p class="module-num">场景 01</p>
+        <h3 class="module-name">职场向上社交</h3>
+        <p class="module-desc">提建议前征得同意，表达需求而非评判。让领导和同事感受到你在倾听他们，而不只是在推销自己的想法——这才是职场里真正的影响力。</p>
+      </div>
+      <div class="module-card reveal">
+        <div class="module-icon">💞</div>
+        <p class="module-num">场景 02</p>
+        <h3 class="module-name">亲密关系</h3>
+        <p class="module-desc">亲密关系不是改造对方，而是真正理解对方。统一战线——你们面对的是问题，不是彼此。倾听不是认同，是让对方感觉到被看见。</p>
+      </div>
+      <div class="module-card reveal">
+        <div class="module-icon">🏠</div>
+        <p class="module-num">场景 03</p>
+        <h3 class="module-name">家庭沟通</h3>
+        <p class="module-desc">父母说"为你好"的背后，是担忧和爱。先反映他们的情感，再说自己的想法——不是"但是"，而是"我们一起想这个问题"。</p>
+      </div>
+      <div class="module-card reveal">
+        <div class="module-icon">🌱</div>
+        <p class="module-num">场景 04</p>
+        <h3 class="module-name">倾听不认同的人</h3>
+        <p class="module-desc">擅于管理自己的人，才擅于倾听。听让你不舒服的话，是最高级的训练——因为那里藏着你自己还没看清的东西。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- 教学理念 -->
 <section id="philosophy">
   <div class="section-wrap">
@@ -1373,25 +1428,6 @@
 </section>
 
 <!-- 学员反馈 -->
-<section id="gallery">
-  <div class="section-wrap">
-    <div class="tag reveal">COMMUNITY</div>
-    <h2 class="section-h2 reveal">我们<span class="grad">在线上</span>一起成长</h2>
-    <p class="section-lead reveal">真实的课堂，真实的伙伴，真实的改变。</p>
-    <div class="gallery-scroll-wrap reveal" id="galleryScroll">
-      <div class="gallery-track">
-        <div class="gallery-item"><img src="6.jpg" alt="线上课堂全员合影" loading="lazy" /></div>
-        <div class="gallery-item"><img src="5.jpg" alt="线上大课堂" loading="lazy" /></div>
-        <div class="gallery-item"><img src="2.jpg" alt="团队线上合照" loading="lazy" /></div>
-        <div class="gallery-item"><img src="4.jpg" alt="学员比大拇指" loading="lazy" /></div>
-        <div class="gallery-item"><img src="8.jpg" alt="线下课堂现场" loading="lazy" /></div>
-        <div class="gallery-item"><img src="7.jpg" alt="线下分享现场" loading="lazy" /></div>
-      </div>
-    </div>
-    <p class="gallery-hint reveal">← 左右滑动查看更多 →</p>
-  </div>
-</section>
-
 <section id="testimonials">
   <div class="section-wrap">
     <div class="tag reveal">TESTIMONIALS</div>
@@ -1504,49 +1540,6 @@
         <p class="test-text">用积极词汇，不说教，说具体，考虑对方的可行性——好好说话，是一种可以学会的技术。</p>
       </div>
     </div>
-
-    <div style="height:1px;background:rgba(79,142,247,0.1);margin-bottom:72px;" class="reveal"></div>
-
-    <!-- 终身成长读书会 -->
-    <div class="test-module-label reveal">
-      <span class="test-module-icon">📖</span>
-      <span>《终身成长》读书会 · 亲密关系模块</span>
-    </div>
-
-    <!-- 核心金句 -->
-    <div class="test-featured reveal">
-      <div class="test-featured-quote">"爱是自我满足的溢出。"</div>
-      <div class="test-featured-meta">—— 学员共鸣最深的一句话</div>
-    </div>
-
-    <div class="testimonials-grid" style="margin-bottom: 72px;">
-      <div class="test-card reveal">
-        <div class="test-num">01</div>
-        <p class="test-text">他虽然伤害了我，但我面前还有一生在等待。如果我一直生活在过去，那我就太愚蠢了。</p>
-      </div>
-      <div class="test-card reveal">
-        <div class="test-num">02</div>
-        <p class="test-text">每一段关系都会让你越来越了解自己，你会渐渐看到适合自己的人到底是什么样子的。</p>
-      </div>
-      <div class="test-card reveal">
-        <div class="test-num">03</div>
-        <p class="test-text">人和人因为背景不同，都是独立个体，不可能心有灵犀。遇到什么事情都要去沟通，沟通能力是最重要的能力。</p>
-      </div>
-      <div class="test-card reveal">
-        <div class="test-num">04</div>
-        <p class="test-text">亲密关系不能有固定性思维，要相互成长。将宽恕作为起点，去学习对自己和感情都有用的东西。</p>
-      </div>
-      <div class="test-card reveal">
-        <div class="test-num">05</div>
-        <p class="test-text">真正会爱的人，需先学会爱自己，才能自然流露对他人的爱。爱是没有算计和控制的，是纯粹的。</p>
-      </div>
-      <div class="test-card reveal">
-        <div class="test-num">06</div>
-        <p class="test-text">在爱的故事里不只有爱情，更有友情和亲情。人生不应只有恋爱，让自己先丰盈起来，才有能力去爱别人。</p>
-      </div>
-    </div>
-
-
   </div>
 </section>
 
@@ -1711,26 +1704,6 @@
     } else {
       area.innerHTML = `<img src="qr_wechat.jpg" alt="微信支付" style="width:100%;height:100%;object-fit:contain;" />`;
     }
-  }
-
-  // 相册拖拽滑动
-  const galleryScroll = document.getElementById('galleryScroll');
-  if (galleryScroll) {
-    let isDown = false, startX, scrollLeft;
-    galleryScroll.addEventListener('mousedown', e => {
-      isDown = true;
-      galleryScroll.classList.add('grabbing');
-      startX = e.pageX - galleryScroll.offsetLeft;
-      scrollLeft = galleryScroll.scrollLeft;
-    });
-    galleryScroll.addEventListener('mouseleave', () => { isDown = false; galleryScroll.classList.remove('grabbing'); });
-    galleryScroll.addEventListener('mouseup', () => { isDown = false; galleryScroll.classList.remove('grabbing'); });
-    galleryScroll.addEventListener('mousemove', e => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - galleryScroll.offsetLeft;
-      galleryScroll.scrollLeft = scrollLeft - (x - startX) * 1.5;
-    });
   }
 </script>
 </body>
